@@ -1,0 +1,71 @@
+body{
+	background-image: url('http://file.vforum.vn/hinh/2016/04/texure-hieu-ung-bokeh-dep-cho-photoshop-6.jpg');
+	background-repeat: repeat;
+	background-size: cover;
+}
+.anhnen{
+	background-image: url('https://i1.wp.com/thuvienanh.net/wp-content/uploads/2019/03/hinh-nen-powerpoint-1.jpeg?fit=1200%2C900&ssl=1&resize=350%2C200');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1 {
+	font-family: 'Lobster';
+	color: #c81b56;
+	font-size: 50px;
+	font-style: italic;
+	text-align: center;
+	text-shadow: 1px 1px 1px #74c81b;
+}
+.h1{
+	font-family: 'Exo 2';
+	color: #e75449;
+	text-align: center;
+	text-shadow: 1px 1px 0px #8e8322;
+}
+span {
+	font-family: Arial;
+	font-size: 30;
+	text-indent: 700px;
+}
+h2 {
+	font-family: 'Exo 2';
+	color: #ce451a;
+	font-size: 35px;
+	text-align: left;
+}
+.anh{
+	vertical-align: middle;
+	width: 400px;
+}
+.anh1{
+	width: 500px;
+}
+.center{
+	text-align: center;
+}
+.mota{
+	color: #207324;
+	font-family: Aria;
+font-size: 30px;
+margin-left: 500px;
+}
+.back{
+	font-size: 50px;
+	margin-left: 500px;
+}
+a:link{
+	color:black;
+}
+a:visited{
+	color: yellow;
+}
+a:hover{
+	color: blue;
+}
+a:focus{
+	color: violet;
+}
+a:active{
+
+	color: hotpink;
+}
