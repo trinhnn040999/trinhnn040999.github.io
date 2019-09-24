@@ -1,0 +1,93 @@
+
+.tieude{
+	
+	height: 25px;
+	padding: 7px;
+	margin: 0 auto;
+	background-color: #e7d8d854;
+}
+.tieude > a{
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 10px;
+	font-size: 15px;
+}
+.tieude > a:link {
+	color: gray;
+}
+.tieude > a:visited {
+	color: blue;
+}
+.tieude > a:hover {
+	color: orange;
+}
+.anh12{
+	margin:10px;
+}
+ul{
+	list-style: none;
+	padding-left: 200px;
+}
+li{
+border-left: 1px solid gray;
+border-right: 1px solid gray;
+	width: 300px;
+	font-family: Arial;
+	color: #5b4e4e;
+	background-color: white;
+	height: 30px;
+}
+
+.first{
+	border-top: 1px solid gray;
+}
+.last{
+	border-bottom: 1px solid gray;
+}
+
+.menu2{
+	position: absolute;
+	visibility: hidden;
+	left: 100px;
+	top: -1px;}
+
+.menu3{
+	position: absolute;
+	visibility: hidden;
+	left: 100px;
+	top: -301px;}
+.hover:hover > ul {
+		visibility: visible;
+	}
+.hover{
+		position: relative;
+	}
+	li:hover {
+		background-color: #e5dada;
+	}
+.menu{
+	height: 362px;
+	width: 100%;
+	background-image: url('anhdep2.png');
+}
+h1{
+	font-family: Arial;
+}
+.anh {width: 20%;height: 450px;}
+.anh1{
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+    -moz-box-shadow:0px 0px 6px rgba(0, 0, 0, 10);
+    -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 10);
+	width: 100%;
+	height: 300px;
+}
+.buonngu{
+	width: 100%;
+}
+.ten{
+	font-weight: bold;
+	font-size: 30px;
+}
+.anh1:hover{
+	transform: scale(1.2, 1.2);
+}
