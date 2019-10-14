@@ -1,0 +1,29 @@
+.child{
+border: 1px solid red;
+flex-basis: 200px;
+}
+.parent{
+	height: 500px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+	align-content: center;
+}
+div.child{
+	background: red;
+/*	flex-grow: 1;*/
+flex-shrink: 0;
+order: 1;
+}
+span{
+	background: yellow;
+	align-self: center;
+	order: -1;
+	/*flex-grow: 2;
+*/}
+img{
+	/*flex-grow: 1;*/
+	max-height: 100%;
+}

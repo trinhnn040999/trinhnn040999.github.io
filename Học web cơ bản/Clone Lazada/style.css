@@ -1,4 +1,6 @@
-
+body{
+	margin: 0;
+}
 .tieude{
 	
 	height: 25px;
@@ -27,6 +29,7 @@
 ul{
 	list-style: none;
 	padding-left: 200px;
+
 }
 li{
 border-left: 1px solid gray;
