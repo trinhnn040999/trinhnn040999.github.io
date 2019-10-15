@@ -1,0 +1,23 @@
+#container{
+	width: 517px;
+	height: 503px;
+	margin: 0 auto;
+	border: 1px solid black;
+	display: grid;
+	grid-template-rows: 130px auto auto auto auto auto;
+	grid-template-columns: auto auto auto 100px;
+	
+}
+#container * {
+ border: 1px solid black;
+  font-size: 30px;
+background-color: #abb2cc30;
+}
+.screen{
+	grid-area: 1/1/2/4;
+}
+.screen input{
+	width: 400px;
+	height: 100px;
+border: none;
+}

@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>	</title>
+	<title>DOM	</title>
 </head>
 <body>
 	<div id="page">	
+		<button>Change Color</button>
+		<button id="plus">+</button>
+		<button id="sub">-</button>
 		<p id="one" class="truong"> Trinh dễ thương</p>
 		<p id="two" class="truong"> Trinh tốt bụng</p>
 
 		<p id="three" class="truong"> Trinh đại gia</p>
 		<script>
+
+			var button=document.getElementsByTagName("button")[0];
+			button.addEventListener("click", changeColor);
+
+			var button1=document.getElementById("plus");
+			button1.addEventListener("click", function(){
+				increaseFontSize(1);
+			}
+				)
+
+			var button2=document.getElementById("sub");
+			button2.addEventListener("click", function(){
+				decreaseFontSize(2);
+			}
+				)
+			
 
 			var p=document.getElementsByTagName("p");
 
@@ -39,6 +58,7 @@
 			function changeFontSize(x){
 				for(var i=0;i<p.length;i++) p[i].style.fontSize = x+"px";
 			}
+		changeFontSize(20);
 
 			//5.function increaseFontSize(paragraph): Tăng kích thước font chữ của đoạn văn mong muốn (tham số truyền vào là id đoạn văn hoặc thứ tự đoạn văn) lên 1 pixel so với kích thước hiện tại, kích thước tăng lên không được vượt quá 30 pixels (Sử dụng sau khi gọi hàm changeFontSize() hoặc dùng window.getComputedStyle).//
 

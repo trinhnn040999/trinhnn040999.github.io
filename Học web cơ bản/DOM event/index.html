@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+	<br>
+	<br>
+<div id="container">
+	<button class="screen"><input type="text" id="kq"></button>
+	<button onclick="xoa(this)">AC</button>
+	<button onclick="tinh(this)">(</button>
+	<button onclick="tinh(this)">)</button>
+	<button onclick="can(this)">&#x221A;</button>
+	<button onclick="trolai(this)">&#8592;</button>
+	<button onclick="tinh(this)">7</button>
+	<button onclick="tinh(this)">8</button>
+	<button onclick="tinh(this)">9</button>
+	<button onclick="tinh(this)">+</button>
+	<button onclick="tinh(this)">4</button>
+	<button onclick="tinh(this)">5</button>
+	<button onclick="tinh(this)">6</button>
+	<button onclick="tinh(this)">-</button>
+	<button onclick="tinh(this)">1</button>
+	<button onclick="tinh(this)">2</button>
+	<button onclick="tinh(this)">3</button>
+	<button onclick="tinh(this)">*</button>
+	<button onclick="tinh(this)">0</button>
+	<button onclick="tinh(this)">.</button>
+	<button onclick="bang(this)">=</button>
+	<button onclick="tinh(this)">/</button>
+
+<script>
+	
+function tinh (button) {
+	kq.value+=button.innerHTML;
+}
+function xoa (button){
+	kq.value="";
+}
+function bang(button){
+	kq.value=eval(kq.value);
+}
+function can(button){
+	kq.value+="Math.sqrt";
+}
+function trolai(button){
+	kq.value=kq.value.substring(0, kq.value.length-1);
+}
+</script>
+</div>
+</body>
+</html>
