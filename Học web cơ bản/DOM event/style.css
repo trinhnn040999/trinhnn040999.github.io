@@ -1,10 +1,11 @@
+
 #container{
 	width: 517px;
 	height: 503px;
 	margin: 0 auto;
 	border: 1px solid black;
 	display: grid;
-	grid-template-rows: 130px auto auto auto auto auto;
+	grid-template-rows: 130px auto auto auto auto auto auto;
 	grid-template-columns: auto auto auto 100px;
 	
 }
@@ -13,11 +14,19 @@
   font-size: 30px;
 background-color: #abb2cc30;
 }
+
+button:hover {
+	background-color: #cbc8c8 !important;
+}
+
+
 .screen{
 	grid-area: 1/1/2/4;
 }
 .screen input{
 	width: 400px;
-	height: 100px;
-border: none;
+	height: 50px;
+	border: 0px solid #b7a8a8a6 !important;
 }
+
+

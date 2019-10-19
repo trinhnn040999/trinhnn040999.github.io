@@ -9,12 +9,16 @@
 	<br>
 	<br>
 <div id="container">
-	<button class="screen"><input type="text" id="kq"></button>
-	<button onclick="xoa(this)">AC</button>
+	<button class="screen"><input type="text" id="pt"><input type="text" id="kq" style="text-align:right"readonly></button>
+	<button onclick="xoa()">AC</button>
 	<button onclick="tinh(this)">(</button>
 	<button onclick="tinh(this)">)</button>
-	<button onclick="can(this)">&#x221A;</button>
+	<button onclick="themngoac(this)">√</button>
 	<button onclick="trolai(this)">&#8592;</button>
+	<button onclick="tinh(this)">^</button>
+	<button onclick="tinh(this)">!</button>
+	<button onclick="tinh(this)">%</button>
+	<button onclick="themngoac(this)">ln</button>
 	<button onclick="tinh(this)">7</button>
 	<button onclick="tinh(this)">8</button>
 	<button onclick="tinh(this)">9</button>
@@ -29,25 +33,77 @@
 	<button onclick="tinh(this)">*</button>
 	<button onclick="tinh(this)">0</button>
 	<button onclick="tinh(this)">.</button>
-	<button onclick="bang(this)">=</button>
+	<button onclick="bang(pt.value)">=</button>
 	<button onclick="tinh(this)">/</button>
-
+<input id=check1 value='0' style="display:none"/>
 <script>
-	
-function tinh (button) {
-	kq.value+=button.innerHTML;
+function tinh (button) {if(check1.value=='1') xoa();
+	pt.value+=button.innerHTML;
+    check1.value='0';
 }
-function xoa (button){
-	kq.value="";
+function xoa(){
+	pt.value="";kq.value="";
 }
-function bang(button){
-	kq.value=eval(kq.value);
+
+function bang(KQ){check1.value='1';
+    for(var i=0,l=KQ.length,k=0;i<l;i++) if(KQ[i]=='(') k++;
+                                         else if(KQ[i]==')') k--;
+    for(;k>0;k--) KQ+=')';
+    pt.value=KQ;
+	KQ=KQ.replace("√", "Math.sqrt")
+         .replace("log", "Math.log")
+         .replace("%", "/100");
+    while(KQ.indexOf('!')>=0)
+    {var st=KQ.indexOf('!');
+                              if(KQ[st-1]!=')') for(var i=st-2;i>=0;i--) {if(KQ[i]!='+'||KQ[i]!='-'||KQ[i]!='*'||KQ[i]!='/') break;}
+                              else for(var i=st-2,kt=1;i>=0;i--) {if(KQ[i]==')') kt++;
+                                                                  else if (KQ[i]=='(') kt--;
+                                                                  if(kt==0) break;}
+                              if(KQ[i]=='(') { KQ=KQ.slice(0,i)+giaithua(KQ.slice(i,st))+KQ.slice(st+1);}
+                              else KQ=KQ.slice(0,i+1)+giaithua(KQ.slice(i,st))+KQ.slice(st+1);
+                              
+    };
+
+    while(KQ.indexOf('^')>=0)
+    {var st=KQ.indexOf('^');
+                              if(KQ[st-1]!=')') for(var i=st-2;i>=0;i--) {if(KQ[i]!='+'||KQ[i]!='-'||KQ[i]!='*'||KQ[i]!='/') break;}
+                              else for(var i=st-2,kt=1;i>=0;i--) {if(KQ[i]==')') kt++;
+                                                                  else if (KQ[i]=='(') kt--;
+                                                                  if(kt==0) break;}
+                              if(KQ[i]=='(') { KQ=KQ.slice(0,i)+binhphuong(KQ.slice(i,st))+KQ.slice(st+1);}
+                              else KQ=KQ.slice(0,i)+binhphuong(KQ.slice(i,st))+KQ.slice(st+1);
+                              
+    };
+     
+	try {eval(KQ);} 
+    catch(e) {alert("Biểu thức bạn nhập không đúng")}
+    finally {kq.value=eval(KQ);}
 }
-function can(button){
-	kq.value+="Math.sqrt";
+
+function themngoac(button){if(check1.value=='1') xoa();
+	pt.value+=button.innerHTML+"(";
+    check1.value='0';
 }
+
 function trolai(button){
-	kq.value=kq.value.substring(0, kq.value.length-1);
+    kq.value="";check1.value='0';
+	pt.value=pt.value.substring(0, pt.value.length-1);
+}
+
+function giaithua(a){
+try {eval(a);} 
+catch(e) {return 'Eror';}
+finally {a=eval(a);
+         if(a%1>0||a<0) return 'Eror';
+         else if(a==0) return 1;
+         else if(a>0) {for(var i=1,kq=1;i<=a;i++) kq*=i; return kq;}
+         }
+}
+function binhphuong(a){
+	try {eval(a);} 
+catch(e) {return 'Eror';}
+finally {a=eval(a);
+         return a*a;}
 }
 </script>
 </div>
