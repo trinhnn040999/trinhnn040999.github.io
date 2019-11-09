@@ -15,7 +15,7 @@
 	<button onclick="tinh(this)">)</button>
 	<button onclick="themngoac(this)">√</button>
 	<button onclick="trolai(this)">&#8592;</button>
-	<button onclick="tinh(this)">^</button>
+	<button onclick="tinh(this)">^2</button>
 	<button onclick="tinh(this)">!</button>
 	<button onclick="tinh(this)">%</button>
 	<button onclick="themngoac(this)">ln</button>
@@ -60,19 +60,12 @@ function bang(KQ){check1.value='1';
                                                                   else if (KQ[i]=='(') kt--;
                                                                   if(kt==0) break;}
                               if(KQ[i]=='(') { KQ=KQ.slice(0,i)+giaithua(KQ.slice(i,st))+KQ.slice(st+1);}
-                              else KQ=KQ.slice(0,i+1)+giaithua(KQ.slice(i,st))+KQ.slice(st+1);
+                              else KQ=KQ.slice(0,i+1)+giaithua(KQ.slice(i+1,st))+KQ.slice(st+1);
                               
     };
 
-    while(KQ.indexOf('^')>=0)
-    {var st=KQ.indexOf('^');
-                              if(KQ[st-1]!=')') for(var i=st-2;i>=0;i--) {if(KQ[i]!='+'||KQ[i]!='-'||KQ[i]!='*'||KQ[i]!='/') break;}
-                              else for(var i=st-2,kt=1;i>=0;i--) {if(KQ[i]==')') kt++;
-                                                                  else if (KQ[i]=='(') kt--;
-                                                                  if(kt==0) break;}
-                              if(KQ[i]=='(') { KQ=KQ.slice(0,i)+binhphuong(KQ.slice(i,st))+KQ.slice(st+1);}
-                              else KQ=KQ.slice(0,i)+binhphuong(KQ.slice(i,st))+KQ.slice(st+1);
-                              
+    while(KQ.indexOf('^2')>=0)
+    {KQ=binhphuong(eval(KQ.slice(0,KQ.length-2)))
     };
      
 	try {eval(KQ);} 

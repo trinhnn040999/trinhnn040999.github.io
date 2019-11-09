@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    background-color: #ccc;
+}
+
+.content {
+    background-color: #fff;
+    height: 100vh;
+    width: 992px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.search-key, .title {
+    text-align: center;
+    display: block;
+}
+
+.title {
+    margin-top: 20px;
+}
+
+input {
+    height: 25px;
+    width: 200px;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+input::placeholder {
+    font-size: 18px;
+}
+
+.title>label {
+    text-align: center;
+    font-size: 28px;
+}
+
+table {
+    width: 765px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+table tbody:first-child tr th {
+    background-color: #8682ED;
+    height: 52px;
+}
+
+table tbody:first-child tr th .filter-title {
+    width: calc(100% - 41px);
+    text-align: center;
+    margin-top: 20px;
+    float: left;
+}
+
+table tbody:first-child tr th .filter-buttom {
+    width: 41px;
+    float: right;
+}
+
+table tbody:first-child tr th .filter-buttom img {
+    cursor: pointer;
+}
+
+table tbody:first-child tr th:first-child {
+    border-top-left-radius: 20px;
+}
+
+table tbody:first-child tr th:last-child {
+    border-top-right-radius: 20px;
+}
+
+table tbody:last-child tr td {
+    height: 45px;
+    text-align: center;
+    font-size: 20px;
+}
+
+table tbody:last-child tr:nth-child(even) {
+    background-color: #FFCC63;
+}
+
+table tbody:last-child tr:nth-child(odd) {
+    background-color: #FEEAC9;
+}
