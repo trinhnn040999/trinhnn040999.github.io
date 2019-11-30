@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+    body, html{
+    margin:0;
+    padding:0;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    grid-gap: 15px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.anh1 {
+    width: 90px;
+    height: 30px;
+    background: pink;
+}
+
+.last {
+    grid-column-start: -1;
+}
+
+.anh2 {
+    background: blue;
+    margin: 15px;
+    height: 800px;
+}
+
+@media (max-width: 568px) {
+    body {
+        background: red;
+    }
+
+    .header {
+        grid-template-columns: auto auto auto;
+    }
+
+    .anh1 {
+        width: 60px;
+    }
+
+    .last {
+        grid-column-start: 3;
+    }
+
+    .anh2 {
+        background: blue;
+        margin: 0px 15px 15px 15px;
+        height: 800px;
+    }
+
+}
+</style>
+</head>
+<body>
+
+    <div class="contain">
+        <div class="header">
+            <div class="anh1"></div>
+            <div class="anh1"></div>
+            <div class="anh1 last"></div>
+        </div>
+        <div class="anh2"></div>
+    </div>
+</body>
+</html>

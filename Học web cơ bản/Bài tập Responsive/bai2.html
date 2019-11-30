@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        body, html{
+            margin:0;
+            padding:0;
+        }
+
+        .body {
+            display: flex;
+        }
+
+        .header {
+            width: 100%;
+            height: 30px;
+        }
+
+        .side {
+            width: 20%;
+        }
+
+        .anh {
+            display: grid;
+            flex-grow: 1;
+            grid-template-columns: repeat(3, auto);
+            grid-gap: 15px;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        @media (max-width: 568px) {
+            body {
+                background: red;
+            }
+
+            .anh {
+                grid-template-columns: auto;
+            }
+
+            .side {
+                width: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contain">
+        <div class="header"></div>
+        <div class="body">
+            <div class="side"></div>
+            <div class="anh">
+              <img src=150.png alt="ảnh">
+              <img src=150.png alt="ảnh">
+              <img src=150.png alt="ảnh">
+              <img src=150.png alt="ảnh">
+              <img src=150.png alt="ảnh">
+              <img src=150.png alt="ảnh">
+              <img src=150.png alt="ảnh">
+              <img src=150.png alt="ảnh">
+              <img src=150.png alt="ảnh">
+              
+          </div>
+          <div class="side"></div>
+      </div>
+  </div>
+</body>
+</html>

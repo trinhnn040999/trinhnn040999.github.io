@@ -17,6 +17,21 @@
   </style>
 </head>
 <body>
+  <button>Click me</button>
+<!-- <script>
+  function fibonacci(num) {
+  if (num <= 1) return 1;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+  }
+  fibonacci(42)
+</script> -->
+<script>
+  $.getJSON('https://minhducluong.herokuapp.com/films', function(film, textStatus) {
+  alert(film[0].title);
+  });
+</script>
+
 
 <div class="container">
   <h2 class="tieude">Chào mừng bạn đến với Green Shop</h2>  
