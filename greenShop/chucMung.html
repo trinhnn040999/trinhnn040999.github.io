@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Đăng nhập tài khoản</title>
+    <title>Trang chủ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="./logo2.JPG"/>
 </head>
@@ -19,7 +19,7 @@
                 <a href="./gioHang.html"style="text-decoration:none;color:#fff"><i class="fas fa-shopping-cart" style="margin-right:5px"></i>Giỏ hàng(0)</a>
             </div>
             <!-- het gio hang  -->
-            <div style="background:#fff;color:#2DB43A; height:100%;padding:9px 12px 9px 12px;"><a href="./dangNhap.html"style="text-decoration:none;color:#2DB43A;">Đăng nhập</a></div >
+            <div><a href="./dangNhap.html"style="text-decoration:none;color:#fff">Đăng nhập</a></div>
             <div><a href="./dangKy.html"style="text-decoration:none;color:#fff">Đăng ký</a></div>
         </div>
         <!-- het ben trai chao Mung  -->
@@ -64,8 +64,8 @@
 
     <div class="khoiMenu">
         <div class="benTraiMenu">
-            <div class="tdMenu"><a href="./index.html"style="text-decoration:none;color:#fff">Trang chủ</a> </div>
-            <div class="tdMenu"><a href="./sanPham.html"style="text-decoration:none;color:#fff">Sản phẩm</a> </div>
+            <div class="tdMenu" style="background:#fff;color:#2DB43A; width:150px;"><a href="./index.html"style="text-decoration:none;color:#2DB43A;">Trang chủ</a></div>
+            <div class="tdMenu" style=" width:150px;cursor:pointer"><a href="./sanPham.html"style="text-decoration:none;color:#fff;cursor:pointer">Sản phẩm</a></div>
             <div class="tdMenu" style="color:#fff; width:150px;margin-left:-30px"><a href="./tinTuc.html"style="text-decoration:none;color:#fff;">Tin tức</a></div>
         </div>
         <!-- het ben trai menu  -->
@@ -75,53 +75,11 @@
         <!-- het ben phai menu  -->
     </div>
     <!-- het khoi menu  -->
+    <div class="chucMungDatHang">Chúc mừng bạn <br> đã đặt hàng thành công <br>^^</div>
 
-    <div class="khoiDangNhap">
-        <div class="tdDangNhap">
-            Đăng nhập tài khoản
-        </div> 
-        <!-- het td dang nhap  -->
+    <!-- <div class="nganCach" style="height: 100px;background:#000"></div> -->
 
-        <div class="khungDangNhap">
-            <form action="">
-                <div class="uname"style="display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 150%;
-                align-items:center;margin-top:20px;margin-left:-30%">
-                    <div style="display:inline-block;width:25%;"><label for="uname"><b>Tên đăng nhập</b></label></div>
-                    <div><input type="text" placeholder="" name="uname" required autofocus id="tdn"></div>
-                </div>
-                <div class="koHopLe" id="khltdn">
-					<span ><i class="fas fa-exclamation-triangle"style="margin-right: 10px;"></i> Tên đăng nhập không được để trống</span>
-					<span class=""><i class="fas fa-check-circle"style="margin-left: 10px;"></i></span>
-				</div>
-                <div class="psw"style="display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 150%;
-                align-items:center;margin-left:-30%">
-                    <div style="display:inline-block;width:25%;"><label for="psw"><b>Mật khẩu</b></label></div>
-                    <div><input type="password" placeholder="" name="psw" required></div>
-                </div>
-                
-            </form>
-            <div class="quenMK">
-                Quên mật khẩu
-            </div>
-            <!-- het quen mk  -->
-            <div class="nutDangNhap"id="btnLogIn">   
-                Đăng nhập
-            </div>
-            <!-- het nut Dang nhap  -->
-            <div class="banChuaCoTK">
-                Bạn chưa có tài khoản!<span style="color:#EB9B1D;margin-left:10px;cursor: pointer;"> <a href="./dangKy.html"style="text-decoration:none;color:#EB9B1D;"> Đăng ký ngay!</a></span>
-            </div>
-            <!-- het ban chua co tk  -->
-        </div>
-        <!-- het khung dang nhap  -->
-    </div>
-    <!-- het khoi dang nhap  -->
+
     <div class="footer">
         <div class="khoifooter">
             <div class="tdFooter">
@@ -159,7 +117,14 @@
             </div>
             <!-- het td footer  -->
             <div class="benDuoiFooter"style="position:relative">
-                <img src="./img/anh000.png">
+                <div id="fb-root" style="display: inline-block;margin-left: 300px;margin-top:-100px;position: absolute;height:100px">
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=190748445085686&autoLogAppEvents=1"></script>
+                    <div class="fb-page" style="marrgin-left:20px;"data-href="https://www.facebook.com/facebookappVietnam/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/facebookappVietnam/" class="fb-xfbml-parse-ignore" style="width:300px;display: inline-block;">
+                            <a href="https://www.facebook.com/facebookappVietnam/">Facebook app</a>
+                        </blockquote>
+                    </div>
+                </div>
                 
             </div>
             <!-- het ben duoi Footer     -->
@@ -168,7 +133,11 @@
     </div>
     <!-- het footer  -->
     <!-- <div class="nganCach" style="height: 100px;background:#000"></div> -->
-    <script src="dangNhap.js"></script>
+    
+    <audio src="chuongChucMung.mp3" autoplay></audio>
+    <embed with="0" height="0" src="chuongChucMung.mp3" autostart="true" loop="true">
     <script src="https://kit.fontawesome.com/7c9edb6824.js"></script>
+    <script src="index.js"></script>
 </body>
+<audio id="bgmMusic" src="chuongChucMung.mp3" preload="auto" type="audio/mp3" autoplay loop></audio>
 </html>
